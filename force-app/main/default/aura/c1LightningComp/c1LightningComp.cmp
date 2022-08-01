@@ -1,0 +1,9 @@
+<aura:component>
+    <aura:handler name="C2ComponentEvent" event="c:LightningEventC2" action="{!c.eventHandler}" phase="bubble"></aura:handler>
+    <aura:attribute default="De-f" type="string" name="xyzChild"></aura:attribute>
+    <ui:outputText aura:id="outName" value="{!v.xyzChild}" class="slds-var-m-top_small"/>
+    <ui:button aura:id="button2" buttonTitle="Click to see what you put into the field" 
+    class="button" label="Click me" press="{!c.getInputC}"/>
+
+    <c:c2LightningComp></c:c2LightningComp>
+</aura:component>

@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<p>TWShop1</p>
+    
+    <!--Registered Event-->
+    <aura:registerEvent name="LowMessageTW1" type="c:ComponentEventFile" />
+    
+    <aura:registerEvent name="MediumMessageTW1" type="c:ComponentEventFile" />
+    
+    <aura:registerEvent name="HighMessageTW1" type="c:ComponentEventFile" />
+    
+    <!---->
+    
+    <lightning:button name="Submit_Low" label="Submit Low" aura:id="Submit_Low" onclick="{!c.sendMessageLow}"/>
+    <lightning:button name="Submit_Medium" label="Submit Medium" aura:id="Submit_Medium" onclick="{!c.sendMessageMedium}"/>
+    <lightning:button name="Submit_High" label="Submit High" aura:id="Submit_High" onclick="{!c.sendMessageHigh}"/>
+</aura:component>

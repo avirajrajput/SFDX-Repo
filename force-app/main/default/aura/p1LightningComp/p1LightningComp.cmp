@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global"   >
+
+    <aura:handler name="C2ComponentEvent" event="c:LightningEventC2" action="{!c.eventHandler}" phase="bubble"></aura:handler>"
+
+    <aura:attribute default="From P1" type="string" name="xyzP1" ></aura:attribute>
+    <div style="background-color: burlywood;">
+    <lightning:card title="This is p1 Comp">
+        <div class="slds-var-m-around_small">
+            <h1>test>></h1>
+            <ui:inputText aura:id="name" label="Enter Name:" placeholder="Your Name" class="slds-var-m-top_small" />
+            <ui:button aura:id="button" buttonTitle="Click to see what you put into the field" class="button" label="Click me" press="{!c.getInput}"/>
+            <ui:outputText aura:id="outName" value="{!v.recordId}" class="slds-var-m-top_small"/>            
+        </div>
+    </lightning:card>
+    <lightning:card title="Child Outer">
+        <div class="slds-var-m-around_small">
+            <c:c1LightningComp xyzChild="{!v.xyzP1}"></c:c1LightningComp>
+        </div>
+    </lightning:card>
+</div>
+</aura:component>

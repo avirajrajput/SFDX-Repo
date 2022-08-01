@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <p>State1</p>
+    
+    <aura:handler name="MediumMessageTW1" event="c:ComponentEventFile" action="{!c.handleMessage}" phase="bubble" />
+    
+    <c:District1/>
+    
+</aura:component>

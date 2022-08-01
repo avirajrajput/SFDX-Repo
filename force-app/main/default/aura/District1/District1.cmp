@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<p>District1</p>
+    
+    <aura:handler name="LowMessageTW1" event="c:ComponentEventFile" action="{!c.handleMessage}" phase="capture" />
+    <aura:handler name="MediumMessageTW1" event="c:ComponentEventFile" action="{!c.handleMessage}" phase="bubble" />
+    <aura:handler name="HighMessageTW1" event="c:ComponentEventFile" action="{!c.handleMessage}" phase="bubble" />
+    
+    
+    <c:TWShop1/>
+</aura:component>

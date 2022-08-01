@@ -1,0 +1,5 @@
+<apex:page controller="FirstApexTriggerHandler">
+    <apex:dataTable value="{!accounts}" var="acc">
+        <apex:column value="{!acc.name}"/>
+    </apex:dataTable>
+</apex:page>

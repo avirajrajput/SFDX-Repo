@@ -1,0 +1,6 @@
+<aura:component controller="PreTestApexClass">
+    <aura:attribute type="Account" name="AccountObject" default="{'sobject' : 'Account'}"/>
+    
+    <lightning:input type="input" label="Name" name="Name" value="{!v.AccountObject.Name}"/>
+    <lightning:button label="Submit" name="Submit" onclick="{!c.submit}"/>
+</aura:component>

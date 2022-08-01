@@ -1,0 +1,34 @@
+<template>
+        <div class="slds-card">
+                <div class="slds-m-around_medium class3">
+                        <div class="class1 padding">
+                                <strong class="class2">First name</strong>
+                                <input type="text" id="firstName" class="slds-input" onkeyup={onChangeFirstName}></input>
+
+                                <strong class="class2">Last name</strong>
+                                <input type="text" id="lastName" class="slds-input" onkeyup={onChangeLastName}></input>
+
+                                <strong class="class2">Phone Number</strong>
+                                <input type="number" id="phoneNumber" class="slds-input" onkeyup={onChangePhoneNumber}></input>
+
+                                <button style="margin-top: 10px;" class="slds-button slds-button_neutral" onclick={onSubmit}>Submit</button>
+
+                                <div>Result: {result}</div>
+                                
+                        </div>
+
+                        <div class="class1 padding">
+                                <strong class="class2">First name</strong>
+                                <input type="text" id="firstName2" class="slds-input" onkeyup={onChangeHandler}></input>
+
+                                <strong class="class2">Last name</strong>
+                                <input type="text" id="lastName2" class="slds-input" onkeyup={onChangeHandler}></input>
+
+                                <strong class="class2">Phone Number</strong>
+                                <input type="number" id="phoneNumber2" class="slds-input" onkeyup={onChangeHandler}></input>
+
+                                <button style="margin-top: 10px;" class="slds-button slds-button_neutral" onclick={onSubmit}>Submit</button>
+                        </div>
+                </div>
+        </div>
+</template>

@@ -1,0 +1,13 @@
+<aura:component controller="HelperApex">
+	<h1>Left Comp</h1>
+    <aura:attribute type="List" name="Accounts"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:iteration items="{!v.Accounts}" var="value" >
+        
+        <p>
+        	{!v.value.Name}
+        </p>
+        
+    </aura:iteration>
+</aura:component>

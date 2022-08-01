@@ -1,0 +1,17 @@
+.class1{
+        width: 50%;
+}
+
+.class2{
+        color: black;
+        margin-top: 10px;
+}
+
+.class3{
+        display: flex;
+        flex-direction: row;
+}
+
+.padding{
+        padding: 10px;
+}

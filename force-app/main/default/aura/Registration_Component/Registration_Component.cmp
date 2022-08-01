@@ -1,0 +1,30 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    Registration From for Students
+    <aura:attribute name="NameOfStudent" type="String" default=""/>
+    <aura:attribute name="ParentsName" type="String" default=""/>
+    <aura:attribute name="Class" type="String" default=""/>
+    <aura:attribute name="NumberOfHrStudy" type="String[]" default="Less then 1 hr,
+                                                                    In between 1 - 4 hr,
+                                                                    In between 4 - 6 hr, 
+                                                                    More then 6 hr"/>
+    <aura:attribute name="usersSelcted" type="String" default=""/>
+    
+    <aura:attribute name="MobileNumber" type="Integer" default=""/>
+    <aura:attribute name="HaveyouTkkenCoursebefore" type="Boolean" default="false"/>
+    
+    <!---->
+    
+    <lightning:input label="Enter your name" name="studentName" value="{!v.NameOfStudent}"/>
+    <lightning:input label="Enter your Parent's name" name="parentName" value="{!v.ParentsName}"/>
+    <lightning:input label="Enter your Class" name="className" value="{!v.Class}"/>
+    
+    <lightning:select name="select1" label="How many hr do you Study ?" value="{!v.usersSelcted}">
+        <aura:iteration items="{!v.NumberOfHrStudy}" var="item">
+            <option value="{!item}" text="{!item}"/>
+        </aura:iteration>
+    </lightning:select>
+    
+    <lightning:input type="telephone" label="Enter Phone Number" name="phoneNumber" value="{!v.MobileNumber}"/>
+    <lightning:input type="checkbox" label="Have Course Before" name="haveCourseBefore" value="{!v.HaveyouTkkenCoursebefore}"/>
+</aura:component>

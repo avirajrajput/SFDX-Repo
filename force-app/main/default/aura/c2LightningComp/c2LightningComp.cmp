@@ -1,0 +1,15 @@
+<aura:component controller="C1TestServerComponent">
+    <aura:registerEvent name="C2ComponentEvent" type="c:LightningEventC2"/>
+  
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+
+    <aura:attribute name="accounts" type="List" default="[]"></aura:attribute>
+
+    <p>C2 Component</p>
+
+    <ui:button aura:id="fireButton" class="button" label="Fire" press="{!c.fireEvent}"/>
+
+    <aura:iteration items="{!v.accounts}" var="item" indexVar="index">
+        <p> >> {!item}</p>
+    </aura:iteration>
+</aura:component>

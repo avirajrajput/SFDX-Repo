@@ -1,0 +1,39 @@
+<aura:component controller="SaveTempObject" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" >
+   
+    
+    <aura:attribute type="String" name="ObjectId"/>
+    <aura:attribute type="String" name="PagePropety" />
+    
+    <aura:attribute type="List" name="list" default="[]"/>
+    
+    <aura:attribute  name="tempForm" type="TempObject__c" default="{'sobjectType':'TempObject__c'}"/>
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.list}" action="{!c.onChangeList}"/>
+    
+    <!--  
+    	<aura:attribute name="tempForm" type="TempObject__c" default="{'sobjectType' : 'TempObject__c'}"/>
+    -->
+    <div>
+    
+        <lightning:input type="input" name="name" label="Enter name" value="{!v.tempForm.Name}"/><br/>
+        <lightning:input type="telephone" name="phoneNumber" label="Enter your Phone Number" value="{!v.tempForm.PhoneNumber__c}"/><br/>
+        <lightning:input type="number" name="amount" label="Amount" value="{!v.tempForm.Amount__c}"/>
+        <lightning:input aura:id="checkBoxId" type="checkbox" label="Check Box" onchange="{!c.onChangeCheckBox}"/>             
+        
+        <br/>
+        <lightning:button name="submit" label="Submit" onclick="{!c.submit}"/>
+        
+        <br/>
+        <aura:iteration items="{!v.list}" var="item" indexvar="index">
+            <c:LightningCom2 ObjectId="{!v.ObjectId}" listChild="{!v.list}" indexNo="{!v.index}"/>
+        </aura:iteration>
+        
+        <br/>
+        <br/>
+         
+        <lightning:button name="addcomp2" label="+ Add Comp2" onclick="{!c.addComp2}"/>
+    </div>
+</aura:component>
