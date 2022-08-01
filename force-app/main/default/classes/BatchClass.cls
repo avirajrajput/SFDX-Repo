@@ -5,7 +5,7 @@ global class BatchClass implements Database.Batchable<SObject>, Database.StateFu
     global Database.QueryLocator start(Database.BatchableContext BC){
         return Database.getQueryLocator(query);
     }
-    
+    //Check Here
     global void execute(Database.BatchableContext BC, List<Account> scope){
         
         //this.sendMail();
